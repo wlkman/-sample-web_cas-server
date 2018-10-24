@@ -49,6 +49,9 @@
                   <port>9090</port>
                   <path>/cas</path>
                   <uriEncoding>UTF-8</uriEncoding>
+                  <httpsPort>9443</httpsPort>
+                  <keystoreFile>${project.basedir}\src\main\webapp\WEB-INF\certificates\server.jks</keystoreFile>
+                  <keystorePass>password</keystorePass>
                   <!--自动部署配置-->
                   <!--<server>mytomcat7</server>  &lt;!&ndash; setting.xml 的server id&ndash;&gt;-->
                   <!--<username>tomcat</username> &lt;!&ndash; tomcat-user.xml 的 username &ndash;&gt;-->
