@@ -58,7 +58,9 @@
 				   -->
 				<entry key-ref="proxyAuthenticationHandler" value-ref="proxyPrincipalResolver" />
 				<!--<entry key-ref="dbAuthHandler" value-ref="primaryPrincipalResolver" />-->
-				<entry key-ref="primaryAuthenticationHandler" value-ref="primaryPrincipalResolver" />
+				<!--<entry key-ref="primaryAuthenticationHandler" value-ref="primaryPrincipalResolver" />-->
+				<entry key-ref="esoSSLAuthenticationHandler" value-ref="primaryPrincipalResolver" />
+				<!--<entry key-ref="esoAuthenticationHandler" value-ref="primaryPrincipalResolver" />-->
 			</map>
 		</constructor-arg>
 
@@ -83,6 +85,12 @@
 			<bean class="org.jasig.cas.authentication.AnyAuthenticationPolicy" />
 		</property>
 	</bean>
+
+	<bean id="esoAuthenticationHandler"
+		  class="org.cas.server.support.myself.handler.ESOAuthenticationHandler" />
+
+	<bean id="esoSSLAuthenticationHandler"
+		  class="org.cas.server.support.myself.handler.ESOSSLAuthenticationHandler" />
 
 	<!-- Required for proxy ticket mechanism. -->
 	<bean id="proxyAuthenticationHandler"
